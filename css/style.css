@@ -1,0 +1,301 @@
+/***************/
+/*GENERALITES*/
+/***************/
+
+:root{
+    --orange:#FF9D00;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-size: 2rem;
+	font-family: 'Open Sans', sans-serif;
+}
+header a, main a{
+    text-decoration:none;
+}
+nav ul{
+    list-style:none;
+}
+header nav{
+    font-size:2.5rem;
+	font-family:"bodega sans";
+}
+h1, h2, h3{
+    text-transform:uppercase;
+    color:#fff;
+	font-family:"bodega sans";
+}
+h1{
+    font-size:4rem;
+    text-align:center;
+    margin:0;
+    padding:1em 0;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size:2.5rem;
+}
+/*déclaration de la font avec la fonction "font face "*/
+/*déclaration de la "font regular"*/
+@font-face {
+    /*on choisi un nom pour cette font*/
+    font-family:"bodega sans";
+    
+    /*on charge le fichier de la font*/
+    src: url(../fonts/BodegaSans_Black.ttf) format("truetype");
+}
+.orange{
+    color:var(--orange);
+}
+.container{
+    max-width:1024px;
+    margin:0 auto;
+}
+img{
+    max-width:100%;
+    width:auto;
+    height:auto;
+}
+video{
+    max-width:100%;
+    width:auto;
+    height:auto;
+}
+
+
+/*********/
+/*HEADER*/
+/*********/
+
+nav a{
+    color:#fff;
+    padding:.5em 0;
+}
+header{
+    background: linear-gradient(135deg, #fff 50%, #333 50%, #333 100%);
+    padding:1em 0;
+}
+header div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.header li{
+    display:flex;
+    flex-direction:column;
+}
+.header ul{
+    padding:0;
+}
+
+
+/*********/
+/*MAIN*/
+/*********/
+
+body{
+    background-image: url(../img/bg_body.svg);
+    background-color:#444;
+}
+main{
+    padding-bottom:3em;
+}
+.discover{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin:0 auto 1em auto;
+}
+.discover h2{
+    width:100%;
+}
+.moto{
+    width:23%;
+    padding:1em;
+    background-color:#fff;
+    text-align:center;
+}
+.moto+.moto{
+    margin-left:1em;
+}
+.moto h3{
+    border-bottom:1px solid var(--orange);
+}
+.savoirplus{
+    background-color:var(--orange);
+    color:#fff;
+    padding:.5em 1.5em;
+    margin-top:1em;
+    display:block;
+}
+.know{
+    display:flex;
+    flex-wrap:wrap;
+    color:#D0D0D0;
+}
+.know h2{
+    width:100%;
+}
+.knowus{
+    width:50%;
+}
+.fa-brands{
+    color:#fff;
+    font-size: 200%;
+}
+.fa-brands+.fa-brands{
+    margin-left:2em;
+}
+.icon{
+    padding-left:2em;
+}
+
+
+/*********/
+/*FOOTER*/
+/*********/
+
+.footer{
+    text-align:center;
+    color:#D0D0D0;
+}
+.foot{
+    margin-bottom:3em;
+}
+.foot>p{
+    padding:0 2em 1em 2em;
+}
+.foot ul{
+    display:flex;
+    justify-content:center;
+    padding:0;
+}
+footer a{
+    text-decoration:underline;
+}
+.foot li+li{
+    padding-left:1em;
+}
+.license img{
+    width:4%;
+}
+.vrooom{
+    position:fixed;
+    bottom:0;
+    right:0;
+    color:#fff;
+    font-size: 3.5rem;
+    z-index:10;
+    background-image: url(<i class="fa-solid fa-cloud"></i>);
+}
+.vrooom a{
+    text-decoration:none;
+}
+.vrooom::before{
+    font-family:"FontAwesome";
+    content:"\f21c";
+    font-weight:bold;
+    color:#fff;
+    padding-right:1em;
+}
+.vrooom::after{
+    font-family:"FontAwesome";
+    content:"\f062";
+    font-weight:bold;
+    color:#fff;
+    padding-left:1em;
+}
+
+
+
+/*********************/
+/*TABLETTE*/
+/*********************/
+
+@media screen and (max-width:980px){
+    header{
+        margin:2em;
+        padding:2em;
+    }
+    .flexslider{
+    width:90%;
+    margin:auto!important;
+    }
+    .discover{
+        margin:2em;
+    }
+    .moto{
+        display:block;
+        max-width:100%;
+        width:100%;
+    }
+    .moto+.moto{
+        margin:0;
+        margin-top:1em;
+    }
+    .know{
+        display:block;
+        padding:2em;
+    }
+    .knowus{
+        display:block;
+        width:100%;
+        margin:auto;
+    }
+    .knowsus p{
+        
+    }
+    .icon{
+        padding:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    
+.fa-brands+.fa-brands{
+    margin-left:0;
+}
+.fa-brands{
+    color:#fff;
+    font-size: 400%;
+    margin-top:.5em;
+}
+video{
+    margin-top:2em;
+}
+.footer{
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.20), 0 10px 10px 0 rgba(0, 0, 0, 0.20);
+    margin:2em;
+    padding:1em;
+}
+}
+
+
+/*********************/
+/*MOBILE*/
+/*********************/
+
+
+@media screen and (max-width:780px){
+    header div{
+        display:block;
+        text-align:left;
+    }
+    header nav{
+        text-align:right;
+    }
+    .foot nav{
+        display:flex;
+        flex-wrap:wrap;
+    }
+}
